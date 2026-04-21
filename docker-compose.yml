@@ -1,0 +1,17 @@
+services:
+  cassandra:
+    image: cassandra:5.0
+    container_name: cassandra
+    ports:
+      - "9042:9042"   # CQL
+    environment:
+      - CASSANDRA_CLUSTER_NAME=quotes-cluster
+      - CASSANDRA_NUM_TOKENS=16
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+    restart: unless-stopped
+
+volumes:
+  cassandra_data:
