@@ -1,6 +1,7 @@
 package com.emc.programming_quotes.author.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
@@ -30,6 +31,10 @@ public class AuthorService {
 
 	public void delete(final UUID id) {
 		authorRepository.deleteById(id);
+	}
+
+	public Optional<Author> findById(final UUID id) {
+		return authorRepository.findById(id);
 	}
 
 }

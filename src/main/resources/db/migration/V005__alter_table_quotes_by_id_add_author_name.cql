@@ -1,0 +1,1 @@
+ALTER TABLE quotes_by_id ADD author_name text;

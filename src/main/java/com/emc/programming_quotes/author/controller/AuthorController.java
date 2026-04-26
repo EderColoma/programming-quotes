@@ -1,4 +1,4 @@
-package com.emc.programming_quotes.author;
+package com.emc.programming_quotes.author.controller;
 
 import java.util.List;
 import java.util.UUID;
